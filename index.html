@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Identity Card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Identity Card</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Welcome to My Digital Identity</h1>
-  <img src="profile.jpg" alt="Profile Photo" width="150" height="150">
+    <h1>Digital Identity Card</h1>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="id">Student ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+        
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo"><br><br>
+
+        <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+    <div id="qr-code"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
